@@ -1,0 +1,99 @@
+:root {
+    --clr-primary: #0D0D0D; /* Deep black, smooth like velvet */
+    --clr-secondary: #FF7300dc; /* Bright, vibrant orange */    
+    --clr-secondary-dark: #ff730093; /* Bright, vibrant orange */
+    --clr-accent: #f0f0f099; /* Soft warm glow */
+    --clr-text: #F5F5F5; /* Soft pearl white, easy on the eyes */
+}
+
+
+
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+    touch-action: manipulation;
+}
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    /* font-family:  'Arial'; */
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 0.8px;
+    color: var(--clr-text);
+    scroll-behavior: smooth;
+}
+body{
+    height: 100vh;
+    height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--clr-text);
+    background-color: var(--clr-secondary);
+}
+.container{
+    width:23.4rem;
+    height: 41.7rem;
+    position: relative;
+    padding: 2rem 1rem;
+    overflow: hidden;
+    background-color: var(--clr-primary);
+    display: grid;
+    grid-template-rows: 6rem 4rem 1fr;
+}
+
+.inputs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:0.5rem;
+    cursor: none;
+}
+.pin-input{
+
+    font-size: 1.6rem;
+    width: 3.5rem;
+    aspect-ratio: 1/1;
+    color: var(--clr-text);
+    outline: none;
+    border: 3px solid;
+    border-color: var(--clr-secondary);
+    background: transparent;
+    border-radius: 35%;
+    text-align: center;
+    caret-color: transparent;
+    transition: all 0.5s ease-in-out;
+    cursor:default;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+    padding: 2rem 1rem;
+}
+.info p{
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+.info .btn{
+    font-size: 0.86rem;
+    width: 100%;
+    height: 2.5rem;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--clr-secondary);
+    transition: all 250ms ease-in-out;
+}
+.info .btn:active{
+    background-color: var(--clr-secondary-light);
+    color: var(--clr-accent);
+}
